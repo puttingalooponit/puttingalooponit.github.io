@@ -1,0 +1,16 @@
+{ 
+"$schema": "https://vega.github.io/schema/vega-lite/v4.json", "width": 500, 
+"height": 400, 
+"title": "Nominal GDP per Capita (2019)", 
+"data": { 
+  "url": "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/data/Nominal%20GDP%20per%20capita.csv" 
+  },
+  "mark": "bar",
+  "transform": [
+    {"filter": "datum.twentynineteen > 50000"}
+  ], 
+  "encoding": { 
+  "x": { "field": "Country Name",  "title": "Country", "axis": {"labelAngle": 50} }, 
+  "y": { "field": "twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
+  }
+}
