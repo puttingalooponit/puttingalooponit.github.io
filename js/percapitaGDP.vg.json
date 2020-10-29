@@ -7,10 +7,10 @@
   },
   "mark": "bar",
   "transform": [
-    {"filter": "datum.twentynineteen > 50000"}
+    {"filter": "datum.Twentynineteen > 50000"}
   ], 
   "encoding": { 
   "x": { "field": "Country Name",  "title": "Country", "axis": {"labelAngle": 50} }, 
-  "y": { "field": "twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
+  "y": { "field": "Twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
   }
 }
