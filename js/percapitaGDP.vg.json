@@ -5,12 +5,25 @@
 "data": { 
   "url": "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/data/Nominal%20GDP%20per%20capita.csv" 
   },
+    "params": [
+    {
+      "name": "minGDP",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000,
+        "step": 500,
+        "name": "Minimum GDP per Capita: "
+      }
+    }],
   "mark": "bar",
   "transform": [
-    {"filter": "datum.Twentynineteen > 50000"}
+    {"filter": "datum.Twentynineteen > 40000"},
+    {"filter": "datum.Twentynineteen > minGDP"}
   ], 
   "encoding": { 
-  "x": { "field": "Country Name",  "title": "Country", "axis": {"labelAngle": 50} }, 
+  "x": { "field": "Country Name",  "title": "Country / Region", "axis": {"labelAngle": 50} }, 
   "y": { "field": "Twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
   }
 }
