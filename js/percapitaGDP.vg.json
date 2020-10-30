@@ -19,8 +19,7 @@
     }],
   "mark": "circle",
   "transform": [
-    {"filter": "datum.Twentynineteen > minGDP"},
-    {"filter": "'datum.Country Name' != 'European Union'"}
+    {"filter": "datum.Twentynineteen > minGDP"}
   ], 
   "encoding": { 
   "y": { "field": "Country Name",  "title": "Country / Region", "axis": {"labelAngle": 0} }, 
