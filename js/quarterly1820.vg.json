@@ -21,7 +21,7 @@
       }
     },
     "y": {
-      "field": "Value", "type": "quantitative",
+      "field": "Value", "type": "quantitative", "title": "Change in GDP",
       "axis": {
         "gridColor": {
           "condition": {"test": "datum.Value === 0", "value": "black"},
