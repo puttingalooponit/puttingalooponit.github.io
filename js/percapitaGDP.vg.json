@@ -24,5 +24,8 @@
   "encoding": { 
   "y": { "field": "Country Name",  "title": "Country / Region", "axis": {"labelAngle": 0} }, 
   "x": { "field": "Twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
+  },
+  "config": {
+    "axisY": {"minExtent": 90}
   }
 }
