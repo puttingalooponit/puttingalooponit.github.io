@@ -79,7 +79,7 @@
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
-    <div class="pure-g">
+    <!--<div class="pure-g">
         <div class="pure-u-2-3">
           <div id="vis2"  class="vis-container"></div>
         </div>
@@ -88,27 +88,27 @@
             <h2>This is the second section</h2>
             <p> </p>
           </div>
-        </div>
+        </div> -->
       
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
-    <!--<div class="pure-g">
+    <div class="pure-g">
       <div class="pure-u-1-3">
         <div class="description description-left">
-          <h2>This is the third section</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          <h2>Comparing the Financial Crises: Covid-19 vs The Great Recession</h2>
+          <p>In this visualisation, we can see that among the most documented and developed economies of the world, the economic loss brought by Covid-19 is magnitudes greater then that of the The Great Recession. A frightening factor to consider is that with countries jumping in and out of lockdowns, the worst may be yet to come.</p>
         </div>
       </div>
       <div class="pure-u-1-3">
-        <div id="vis4"  class="vis-container"></div>
+        <div id="vis2"  class="vis-container"></div>
       </div>
       <div class="pure-u-1-3">
         <div id="vis3"  class="vis-container"></div>
       </div>
     
-    </div> -->
+    </div>
     <!-- end pure grid group -->
   
     <div class="pure-g">
@@ -122,7 +122,8 @@
    
 <script type="text/javascript">
   var specVis1 = "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/percapitaGDP.vg.json";
-  var specVis2= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/percapitaGDP.vg.json";
+  var specVis2= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly0809.vg.json";
+  var specVis2= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly1820.vg.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -132,11 +133,7 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
