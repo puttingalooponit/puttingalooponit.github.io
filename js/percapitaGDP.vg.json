@@ -8,10 +8,10 @@
     "params": [
     {
       "name": "minGDP",
-      "value": 0,
+      "value": 48000,
       "bind": {
         "input": "range",
-        "min": 0,
+        "min": 30000,
         "max": 100000,
         "step": 500,
         "name": "Minimum GDP per Capita: "
@@ -19,11 +19,11 @@
     }],
   "mark": "circle",
   "transform": [
-    {"filter": "datum.Twentynineteen > 40000"},
-    {"filter": "datum.Twentynineteen > minGDP"}
+    {"filter": "datum.Twentynineteen > minGDP"},
+    {"filter": "'datum.Country Name' != 'European Union'"}
   ], 
   "encoding": { 
-  "x": { "field": "Country Name",  "title": "Country / Region", "axis": {"labelAngle": 50} }, 
-  "y": { "field": "Twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
+  "y": { "field": "Country Name",  "title": "Country / Region", "axis": {"labelAngle": 0} }, 
+  "x": { "field": "Twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
   }
 }
