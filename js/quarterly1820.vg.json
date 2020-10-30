@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "The Growth rate of the major economies for Q2 of 2020",
+  "data": {
+  "url": "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/data/10countryquarterly.csv"  
+  },
+  "transform": [
+    {"filter": "datum.Time == '2020-Q2'"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country", "type": "nominal",
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelAngle": 55,
+        "labelPadding": 4
+      }
+    },
+    "y": {
+      "field": "Value", "type": "quantitative",
+      "axis": {
+        "gridColor": {
+          "condition": {"test": "datum.Value === 0", "value": "black"},
+          "value": "#ddd"
+        }
+      }
+    }
+  }
+}
