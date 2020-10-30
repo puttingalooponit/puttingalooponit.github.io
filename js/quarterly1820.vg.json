@@ -12,7 +12,7 @@
   "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Country", "type": "nominal",
+      "field": "Country", "type": "nominal", "title": "Country / Region",
       "axis": {
         "domain": false,
         "ticks": false,
