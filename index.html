@@ -79,6 +79,21 @@
     <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="description description-left">
+            <h2>Nominal Growth in relation to Economy and Population Size</h2>
+            <p> This scatterplot represents growth relative to Economy size, and using colour differentiates between countries whose economic growth matches or exceeds their population growth.
+			Having a negative population, negative economic growth, or slow economic growth in relation to population size are key indicators for a weakening economy.</p>
+          </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="vis5" class="vis-container"> </div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+	
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
             <h2>The Richest Citizens in the World</h2>
             <p> This visualisation represents the Nominal GDP by Volume per Capita of all the countries & Regions.</p>
           </div>
@@ -123,6 +138,7 @@
   var specVis2= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly0809.vg.json";
   var specVis3= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly1820.vg.json";
   var specVis4= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/gdpvolmap.vg.json";
+  var specVis5= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/volumevsgrowth19.vg.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -137,6 +153,10 @@
   }).catch(console.error);
 
   vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
