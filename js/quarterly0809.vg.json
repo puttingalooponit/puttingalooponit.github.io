@@ -18,17 +18,12 @@
         "domain": false,
         "ticks": false,
         "labelAngle": 55,
-        "labelPadding": 4
-      }
+        "labelPadding": 4}
     },
     "y": {
-      "field": "Value", "type": "quantitative", "title": "Change in GDP",
-      "axis": {
-        "gridColor": {
-          "condition": {"test": "datum.Value === 0", "value": "black"},
-          "value": "#ddd"
-        }
-      }
-    }
+      "field": "Value", "type": "quantitative", "title": "Change in GDP"},
+     "tooltip": [ 
+    {"field": "Country", "type": "nominal","title":"Country/Region"},
+    {"field": "Value", "type": "quantitative","title":"% Change in Real GDP"}]
   }
 }
