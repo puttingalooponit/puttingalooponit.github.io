@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container", 
+  "height": 300, 
+  "title": "Nominal GDP Growth against Volume (2019)",
+  "data": {"url": "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/data/Global%20nominal%20GDP%20in%20Volume.csv"},
+   "transform": [
+  {"calculate": "datum.Twentynineteen/1000000000", "as": "volBillions"}],
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "Twentynineteen", "type": "quantitative", 
+    "title": "Nominal Volume of GDP", "axis": {"tickCount": 4},
+    "scale": {
+      "type": "log", "domain": [10000000, 100000000000000]
+      }
+    },
+    "y": {"field": "Twentynineteen_gdpgrowth", "type": "quantitative",
+     "title": "Nominal Growth of GDP"},
+    "color": {
+    "condition": {"test": "datum.Twentynineteen_gdpgrowth / datum.Twentynineteen_popgrowth > 1 && datum.Twentynineteen_popgrowth > 0", "value": "#43a2ca"}, "value":"#e34a33"},
+  "tooltip": [ 
+    {"field": "Country", "type": "nominal","title":"Country/Region"}, 
+    {"field": "Twentynineteen_gdpgrowth", "type": "quantitative", "title": "Nominal GDP growth"}, 
+    {"field": "Twentynineteen_popgrowth", "type": "quantitative", "title": "Population growth"}, 
+    { "field": "volBillions", "type": "quantitative", "title": "GDP Volume in Billions"} ]
+  }
+}
+
