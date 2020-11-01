@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 1000,
+  "width": "container",
   "height": 300,
   "title":"Nominal Change in GDP (2019)",
    "projection": {
