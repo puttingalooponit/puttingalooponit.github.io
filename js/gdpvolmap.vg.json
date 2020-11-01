@@ -35,9 +35,7 @@
       {"field": "Twentynineteen_gdpgrowth", "type": "quantitative",
       "title": "% change in GDP"},
       {"field": "Twentynineteen_popgrowth", "type": "quantitative",
-      "title": "% change in Population"},
-      {"field": "GDPexceedsPOP", "type": "quantitative",
-      "title": "GDP growth ratio Population Growth"}
+      "title": "% change in Population"}
     ]
   }
 }
