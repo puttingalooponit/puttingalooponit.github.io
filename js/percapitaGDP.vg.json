@@ -23,7 +23,12 @@
   ], 
   "encoding": { 
   "y": { "field": "Country Name",  "title": "Country / Region", "axis": {"labelAngle": 0} }, 
-  "x": { "field": "Twentynineteen", "title": "GDP per Capita", "type": "quantitative" }
+  "x": { "field": "Twentynineteen", "title": "GDP per Capita", "type": "quantitative" },
+  "color":{"value": "#43a2ca"},
+  "tooltip": [ 
+    {"field": "Country Name", "type": "ordinal","title":"Country/Region"},
+    {"field": "Twentynineteen", "type": "quantitative","title":"GDP per Capita"}
+    ]
   },
   "config": {
     "axisY": {"minExtent": 90}
