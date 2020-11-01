@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 300,
+  "title":"Nominal Change in GDP (2019)",
+   "projection": {
+    "type": "equirectangular"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/ne_110m_admin_0_countries.topojson", 
+    "format": {
+      "type": "topojson",
+      "feature": "ne_110m_admin_0_countries"
+    }
+  },
+  "transform": [{
+    "lookup": "properties.NAME",
+    "from": {
+      "data": {
+        "url": "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/data/Global%20nominal%20GDP%20in%20Volume.csv"
+      },
+      "key": "Country",
+      "fields": ["Twentynineteen_gdpgrowth","Twentynineteen_popgrowth"]
+    }
+  },
+  {"calculate": "datum.Twentynineteen_gdpgrowth / datum.  Twentynineteen_popgrowth", "as": "GDPexceedsPOP"}],
+  "mark": "geoshape", 
+  "encoding": {
+    "color": {
+      "field": "Twentynineteen_gdpgrowth", "title": "% GDP growth",
+      "type": "quantitative", "scale": { "type": "threshold", "domain": [-6, -3, 0, 3, 6], "range": ["#b30000", "#e34a33", "#fc8d59", "#fdd49e","#9ecae1","#08519c"] }
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Twentynineteen_gdpgrowth", "type": "quantitative",
+      "title": "% change in GDP"},
+      {"field": "Twentynineteen_popgrowth", "type": "quantitative",
+      "title": "% change in Population"},
+      {"field": "GDPexceedsPOP", "type": "quantitative",
+      "title": "GDP growth ratio Population Growth"}
+    ]
+  }
+}
