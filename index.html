@@ -25,14 +25,14 @@
        background-color: lightgray;
      }
      .page{
-       width: 1650px;    
+       width: 1250px;    
        background-color: white;   
        margin: auto;
        padding: 50px;
        padding-top: 35px;
     }
     .vis-container{
-      width: 100%;
+      width: 80%;
     }
     .description h2, h1{
       margin-top:0px;
@@ -114,6 +114,7 @@
   var specVis1 = "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/percapitaGDP.vg.json";
   var specVis2= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly0809.vg.json";
   var specVis3= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly1820.vg.json";
+  var specVis4= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/gdpvolmap.vg.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -127,7 +128,7 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
