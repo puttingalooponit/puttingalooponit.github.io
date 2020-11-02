@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Multiple Visualisations | An Example</title>
+  <title>Global Economies and the Impact of Covid-19</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
@@ -19,13 +19,13 @@
       font-family: 'Source Sans Pro', sans-serif;
     }
     h1{
-      font-weight: 600;
+      font-weight: 900;
     }
      body{
        background-color: lightgray;
      }
      .page{
-       width: 1050px;    
+       width: 1200px;    
        background-color: white;   
        margin: auto;
        padding: 50px;
@@ -43,6 +43,9 @@
     .description-left{
       padding-right: 20px;
     }
+	.addpadding{
+	  padding-top: 25px;
+	}
     .pure-g{
       margin-bottom: 25px;
     }
@@ -58,62 +61,75 @@
    <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Nominal GDP's around the World & The Impact of Covid-19</h1>
-        <p>Dealing with Covid-19 has proven to be a unique financial challenge globally, and so in this webpage, I attempt to paint a picture of the global economies pre-pandemic and also show the impact of Covid-19 on their growth.</p>
-      </div>
+		<h1 style="text-align:center">GDP around the World & The Impact of Covid-19</h1> 
+		<p>Dealing with Covid-19 has proven to be a unique financial challenge globally, and so in this webpage, I attempt to paint a picture of the pre-pandemic global economies and also show the impact of Covid-19 on their growth.</p>
+		<p>Nominal GDP represents the total value of all goods and services offered by that country, and is considered to represent the size of a economy.</p>
+		<p>Countries that have not released their data for 2019 have been excluded from the map below.</p>
+	  </div>
     </div>
   <!-- end pure grid group -->
-
+  
+	<!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis4" class="vis-container"> </div>
+        </div>
+    </div>
+	<!-- end pure grid group -->
+	
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <h2>The Size of the World's Economy</h2>
-            <p> This visualisation represents the Nominal GDP by Volume of all the countries & Regions over the last decade.</p>
+            <h2>Nominal Growth in relation to Economy and Population Size</h2>
+            <p> This scatterplot represents growth relative to Economy size, and using colour differentiates between countries whose economic growth matches or exceeds their population growth.</p>
+			<p>Having a negative population growth, negative economic growth, or slow economic growth in relation to population size are key indicators for a weakening economy.</p>
           </div>
         </div>
         <div class="pure-u-2-3">
-          <div id="vis1" class="vis-container"></div>
+          <div id="vis5" class="vis-container"> </div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+	
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+            <h2>The Richest Citizens in the World</h2>
+            <p> This visualisation represents the Nominal GDP by Volume per Capita of all the countries & Regions.</p>
+          </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="vis1" class="vis-container"> </div>
         </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
-    <!--<div class="pure-g">
-        <div class="pure-u-2-3">
+	<div class="addpadding">
+      <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+		    <h2>Comparing the Financial Crises: Covid-19 vs The Great Recession</h2>
+            <p>In this visualisation, we can see that among the most documented and developed economies of the world, the economic loss brought by Covid-19 is magnitudes greater then that of the The Great Recession. </p>
+			<p>A frightening factor to consider is that with countries jumping in and out of lockdowns, the worst may be yet to come.</p>
+		  </div>
+        </div>
+        <div class="pure-u-1-3">
           <div id="vis2"  class="vis-container"></div>
         </div>
         <div class="pure-u-1-3">
-          <div class="description description-right">
-            <h2>This is the second section</h2>
-            <p> </p>
-          </div>
-        </div> -->
-      
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="description description-above">
-          <h2>Comparing the Financial Crises: Covid-19 vs The Great Recession</h2>
-          <p>In this visualisation, we can see that among the most documented and developed economies of the world, the economic loss brought by Covid-19 is magnitudes greater then that of the The Great Recession. A frightening factor to consider is that with countries jumping in and out of lockdowns, the worst may be yet to come.</p>
+          <div id="vis3"  class="vis-container"></div>
         </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div id="vis2"  class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div id="vis3"  class="vis-container"></div>
-      </div>
     
-    </div>
+      </div>
+	</div>
     <!-- end pure grid group -->
   
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
-        <p>This visualisation has been created by Salmaan Khan. The datasources are <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD" target="_blank">The World Bank</a>, and the <a href="https://data.oecd.org/gdp/quarterly-gdp.htm" target="_blank">Organisation for Economic Co-operation and Development.</a></p>
+        <p>This visualisation has been created by Salmaan Khan. The data sources are <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD" target="_blank">The World Bank</a>, and the <a href="https://data.oecd.org/gdp/quarterly-gdp.htm" target="_blank">Organisation for Economic Co-operation and Development.</a></p>
       </div>
     </div>
   
@@ -124,6 +140,8 @@
   var specVis1 = "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/percapitaGDP.vg.json";
   var specVis2= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly0809.vg.json";
   var specVis3= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/quarterly1820.vg.json";
+  var specVis4= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/gdpvolmap.vg.json";
+  var specVis5= "https://raw.githubusercontent.com/puttingalooponit/puttingalooponit.github.io/master/js/volumevsgrowth19.vg.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -134,6 +152,14 @@
   }).catch(console.error);
 
   vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
